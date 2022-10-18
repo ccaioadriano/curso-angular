@@ -1,9 +1,29 @@
-<p>Lista de Cursos {{nomePortal}}</p>
+<section class="modulo-introducao">
+    <h3> Introdução aos conseitos basicos</h3>
+    <p>Lista de Cursos {{ nomePortal }}</p>
 
-<app-curso-detalhe></app-curso-detalhe>
+    <app-curso-detalhe></app-curso-detalhe>
 
-<ul>
-    <li *ngFor="let curso of cursos">
-        {{curso}}
-    </li>
-</ul>
+    <ul>
+        <li *ngFor="let curso of cursos">
+            {{ curso }}
+        </li>
+    </ul>
+</section>
+
+<section class="modulo-property-binding">
+    <article>
+        <h3> Interpolação </h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p> Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor()}}</p>
+        <p>Curso de Angular e não gostei do curso: {{cursoAngular && !getCurtirCurso()}}</p>
+    </article>
+
+    <article>
+        <h3>property-binding</h3>
+        <img src="{{ urlImg }}" />
+        <img [src]="urlImg" />
+        <img bind-src="urlImg" />
+    </article>
+</section>

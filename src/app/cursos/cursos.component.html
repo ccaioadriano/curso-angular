@@ -26,4 +26,29 @@
         <img [src]="urlImg" />
         <img bind-src="urlImg" />
     </article>
+    <alert>teste alo alo </alert>
+
+    <carousel>
+        <slide>
+            <img src="assets/images/nature/1.jpg" alt="first slide" style="display: block; width: 100%;">
+        </slide>
+        <slide>
+            <img src="assets/images/nature/2.jpg" alt="second slide" style="display: block; width: 100%;">
+        </slide>
+        <slide>
+            <img src="assets/images/nature/3.jpg" alt="third slide" style="display: block; width: 100%;">
+        </slide>
+    </carousel>
+
+    <button class="btn btn-primary" (click)="teste();">teste</button>
+    <br>
+    <br>
+    <input (keyup)="setValueKey($event)" (keyup.enter)="salvarValor($event)">
+
+    <!--<span>{{getValorInput()}}</span>-->
+
+    <br>
+    <br>
+
+    <span (mouseover)="isMouseOverOut()" (mouseout)="isMouseOverOut()" [class.highLite]="isMouseOver">Valor Salvo: {{getValorSalvo()}}</span>
 </section>
